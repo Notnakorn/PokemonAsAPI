@@ -1,0 +1,70 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<div class="container-fluid">
+    <h2 class="display-4">Pokemon Consumer - Display data from PokemonAPI</h2>
+    <div class="row" style="margin-top: 15px;">
+
+        <p>Add a new pokemon using the form below. This will send a addPokemonToList request to the PokemonAPI</p>
+        <form id="pokemonForm" asp-page-handler="AddPokemon">
+            @Html.EditorFor(model => model.PokemonToAdd)
+            <button type="button" class="btn btn-primary" onclick="submitPokemonForm()">Add Pokemon</button>
+        </form>
+    </div>
+    <div class="row" style="margin-top: 15px;">
+        <div class="col-sm-6">
+            <form method="post" asp-page-handler="LoadPokemons">
+                <button type="submit" class="btn btn-primary" name="button" value="loadPokemons">Load Pokemon</button>
+            </form>
+        </div>
+        <div class="col-sm-6">
+            <form method="post" asp-page-handler="Add100RandomPokemon">
+                <button type="submit" class="btn btn-primary" name="button" value="add100RandomPokemon">Add 100 random pokemon</button>
+            </form>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 15px;">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.PokemonsFromAPI[0].Name)</th>
+                    <th>@Html.DisplayNameFor(model => model.PokemonsFromAPI[0].Description)</th>
+                    <th>@Html.DisplayNameFor(model => model.PokemonsFromAPI[0].Attack)</th>
+                    <th>@Html.DisplayNameFor(model => model.PokemonsFromAPI[0].Defense)</th>
+                    <th>@Html.DisplayNameFor(model => model.PokemonsFromAPI[0].SpecialAttack)</th>
+                    <th>@Html.DisplayNameFor(model => model.PokemonsFromAPI[0].SpecialDefense)</th>
+                    <th>@Html.DisplayNameFor(model => model.PokemonsFromAPI[0].HitPoints)</th>
+                    <th>@Html.DisplayNameFor(model => model.PokemonsFromAPI[0].Speed)</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.PokemonsFromAPI != null)
+                {
+                    foreach (var pokemon in Model.PokemonsFromAPI)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => pokemon.Name)</td>
+                            <td>@Html.DisplayFor(modelItem => pokemon.Description)</td>
+                            <td>@Html.DisplayFor(modelItem => pokemon.Attack.Value)</td>
+                            <td>@Html.DisplayFor(modelItem => pokemon.Defense.Value)</td>
+                            <td>@Html.DisplayFor(modelItem => pokemon.SpecialAttack.Value)</td>
+                            <td>@Html.DisplayFor(modelItem => pokemon.SpecialDefense.Value)</td>
+                            <td>@Html.DisplayFor(modelItem => pokemon.HitPoints.Value)</td>
+                            <td>@Html.DisplayFor(modelItem => pokemon.Speed.Value)</td>
+                        </tr>
+                    }
+                }
+                @* else
+                {
+                    <tr>
+                        <td colspan="8">No pokemons available or loaded - try pressing on "Load Pokemon".</td>
+                    </tr>
+                } *@
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

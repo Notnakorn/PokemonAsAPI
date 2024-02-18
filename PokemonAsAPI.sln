@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokemonAPI", "PokemonAPI\PokemonAPI.csproj", "{1EC5E8C7-4D62-40A8-9B1C-9AEB94A1841A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokemonModels", "PokemonModels\PokemonModels.csproj", "{6C0F01D9-906A-4236-B90E-34512C571A85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonConsumer", "PokemonConsumer\PokemonConsumer.csproj", "{D856303E-4043-4ADB-8D32-41B289BD631E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1EC5E8C7-4D62-40A8-9B1C-9AEB94A1841A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EC5E8C7-4D62-40A8-9B1C-9AEB94A1841A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EC5E8C7-4D62-40A8-9B1C-9AEB94A1841A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EC5E8C7-4D62-40A8-9B1C-9AEB94A1841A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C0F01D9-906A-4236-B90E-34512C571A85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C0F01D9-906A-4236-B90E-34512C571A85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C0F01D9-906A-4236-B90E-34512C571A85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C0F01D9-906A-4236-B90E-34512C571A85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D856303E-4043-4ADB-8D32-41B289BD631E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D856303E-4043-4ADB-8D32-41B289BD631E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D856303E-4043-4ADB-8D32-41B289BD631E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D856303E-4043-4ADB-8D32-41B289BD631E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {843CBB27-7212-48BB-9E65-C236FDC63F49}
+	EndGlobalSection
+EndGlobal

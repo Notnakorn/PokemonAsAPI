@@ -1,0 +1,46 @@
+﻿@model PokemonModels.PokemonBaseModel
+
+<div class="mb-3">
+    @Html.LabelFor(model => model.Name, new { @class = "form-label" })
+    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+</div>
+
+<div class="mb-3">
+    @Html.LabelFor(model => model.Description, new { @class = "form-label" })
+    @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+</div>
+
+<div class="row">
+    <div class="col">
+        <div class="mb-3">
+            @Html.LabelFor(model => model.Attack.Value, "Attack")
+            @Html.EditorFor(model => model.Attack.Value, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+        <div class="mb-3">
+            @Html.LabelFor(model => model.SpecialAttack.Value, "Special Attack")
+            @Html.EditorFor(model => model.SpecialAttack.Value, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="mb-3">
+            @Html.LabelFor(model => model.Defense.Value, "Defense")
+            @Html.EditorFor(model => model.Defense.Value, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+        <div class="mb-3">
+            @Html.LabelFor(model => model.SpecialDefense.Value, "Special Defense")
+            @Html.EditorFor(model => model.SpecialDefense.Value, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="mb-3">
+            @Html.LabelFor(model => model.HitPoints.Value, "Hit Points")
+            @Html.EditorFor(model => model.HitPoints.Value, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+        <div class="mb-3">
+            @Html.LabelFor(model => model.Speed.Value, "Speed")
+            @Html.EditorFor(model => model.Speed.Value, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+    </div>
+</div>
